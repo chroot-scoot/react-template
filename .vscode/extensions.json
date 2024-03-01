@@ -3,5 +3,6 @@
     "ms-playwright.playwright",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
+    "joshbolduc.commitlint"
   ]
 }

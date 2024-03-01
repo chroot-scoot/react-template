@@ -44,6 +44,7 @@ module.exports = {
       extends: ['plugin:playwright/recommended'],
     },
     {
+      files: ['.eslintrc.cjs', '.prettierrc.cjs', '.commitlintrc.cjs'],
   },
   ignorePatterns: [
     'dist',

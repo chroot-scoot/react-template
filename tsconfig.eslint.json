@@ -7,6 +7,7 @@
     "vite.config.ts",
     "playwright.config.ts",
     "playwright-ct.config.ts",
+    ".commitlintrc.cjs",
     ".eslintrc.cjs",
     ".perttierrc.cjs"
   ]
