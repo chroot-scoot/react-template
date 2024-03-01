@@ -9,10 +9,12 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'prettier',
   ],
+  plugins: ['react-refresh', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: true,
     tsConfigRootDir: __dirname,
+    project: './tsconfig.eslint.json',
   },
   root: true,
   plugins: ['react-refresh'],
@@ -22,6 +24,26 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
+    ],
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+    },
+  ignorePatterns: ['dist', 'node_modules'],
+  overrides: [
+    {
+      files: ['src/**/*.test.{ts,tsx}', 'src/**/*.spec.{ts,tsx}', 'tests'],
+      extends: ['plugin:playwright/recommended'],
+    },
+    {
   },
   ignorePatterns: [
     'dist',
