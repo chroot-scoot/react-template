@@ -12,12 +12,9 @@ module.exports = {
   plugins: ['react-refresh', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: true,
     tsConfigRootDir: __dirname,
     project: './tsconfig.eslint.json',
   },
-  root: true,
-  plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
@@ -36,7 +33,7 @@ module.exports = {
     react: {
       version: 'detect',
     },
-    },
+  },
   ignorePatterns: ['dist', 'node_modules'],
   overrides: [
     {
@@ -45,11 +42,6 @@ module.exports = {
     },
     {
       files: ['.eslintrc.cjs', '.prettierrc.cjs', '.commitlintrc.cjs'],
-  },
-  ignorePatterns: [
-    'dist',
-    '.eslintrc.cjs',
-    '.prettierrc.cjs',
-    'vite.config.ts',
+    },
   ],
 };
