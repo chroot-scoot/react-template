@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# React Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React template project, for chroot && scoot Hackathon Team.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18
+- TypeScript
+- Vite for fast development and builds
+- shadcn/ui for pre-built react components
+- Tailwind CSS for utility-first CSS
+- ESLint for code linting
+- Prettier for code formatting
+- Playwright for end-to-end & component testing
+- Husky for Git hooks
+- Commitlint for commit message linting
+- CI/CD using GitHub Actions
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+First, install the dependencies:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
+```sh
+pnpm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then, setup Git Hooks with Husky:
+
+```sh
+pnpm prepare
+```
+
+To start the development server:
+
+```sh
+pnpm dev
+```
+
+To build the project for production:
+
+```sh
+pnpm build
+```
+
+To run the tests:
+
+```sh
+pnpm test:ct      # Run component tests
+pnpm test:e2e     # Run end-to-end tests
+pnpm test:e2e-ui  # Run end-to-end tests with UI
+```
