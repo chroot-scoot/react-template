@@ -34,19 +34,10 @@ module.exports = {
       version: 'detect',
     },
   },
-  ignorePatterns: ['dist', 'node_modules'],
   overrides: [
     {
       files: ['src/**/*.test.{ts,tsx}', 'src/**/*.spec.{ts,tsx}', 'tests'],
       extends: ['plugin:playwright/recommended'],
-    },
-    {
-      files: [
-        '.eslintrc.cjs',
-        '.prettierrc.cjs',
-        '.commitlintrc.cjs',
-        '.lintstagedrc.cjs',
-      ],
     },
   ],
 };

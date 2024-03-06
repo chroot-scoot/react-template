@@ -8,10 +8,6 @@
     "playwright.config.ts",
     "playwright-ct.config.ts",
     "tailwind.config.ts",
-    "postcss.config.ts",
-    ".commitlintrc.cjs",
-    ".lintstagedrc.cjs",
-    ".eslintrc.cjs",
-    ".perttierrc.cjs"
+    "postcss.config.ts"
   ]
 }
